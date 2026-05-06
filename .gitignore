@@ -31,3 +31,19 @@ gradio_tmp/*
 !requirements.txt
 !__assets__/*
 
+# Local fork additions
+checkpoints/
+demo_video_results/
+__pycache__/
+
+# Whitelist demo assets (override the *.mp4/*.png/*.jpg/*.json bans above)
+!test_videos/
+!test_videos/**/*.mp4
+!test_videos/**/*.md
+!eval_runs/
+!eval_runs/**/*.md
+!eval_runs/**/*.py
+!eval_runs/**/*.png
+!eval_runs/**/*.jpg
+!eval_runs/**/*.json
+
