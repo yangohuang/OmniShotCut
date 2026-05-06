@@ -10,7 +10,7 @@
 > [PySceneDetect](https://github.com/Breakthrough/PySceneDetect) 做了**三方对比**，
 > 重点验证论文 Table 1 里 OmniShotCut 在 **Sudden Jump（同源跳剪）** 场景下相对 baseline 的差异化能力。
 >
-> 完整中文文档见 **[`eval_runs/README.md`](eval_runs/README.md)**，对比表与面试金句见 **[`eval_runs/COMPARISON.md`](eval_runs/COMPARISON.md)**。
+> 完整中文文档见 **[`eval_runs/README.md`](eval_runs/README.md)**，详细帧级对比见 **[`eval_runs/COMPARISON.md`](eval_runs/COMPARISON.md)**。
 > 原作者论文与项目介绍见本页 [Original Project](#original-project) 部分。
 
 ---
@@ -164,7 +164,7 @@ done
 │   └── test_03_sudden_jump.mp4
 └── eval_runs/                      # 三方对比结果
     ├── README.md                   # 完整中文文档
-    ├── COMPARISON.md               # 详细帧级对比 + 面试金句
+    ├── COMPARISON.md               # 详细帧级对比与复现命令
     ├── comparison_timeline.png     # ⭐ 三方时间轴对比图
     ├── plot_comparison.py
     ├── run_transnetv2.py

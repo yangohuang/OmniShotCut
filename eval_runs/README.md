@@ -116,8 +116,8 @@ done
 ```
 eval_runs/
 ├── README.md                    # 本文件
-├── COMPARISON.md                # 详细对比表 + 面试金句
-├── comparison_timeline.png      # ⭐ 一图讲完三方差异（简历封面）
+├── COMPARISON.md                # 详细对比表与复现命令
+├── comparison_timeline.png      # ⭐ 一图讲完三方差异
 ├── plot_comparison.py           # 生成上面那张图的脚本
 ├── run_transnetv2.py            # TransNetV2 复现脚本
 ├── test_01_hardcut/{results.json, viz/}      # OmniShotCut 输出

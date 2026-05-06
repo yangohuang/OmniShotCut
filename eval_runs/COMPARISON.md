@@ -65,7 +65,7 @@ test_03_sudden_jump.mp4→ 1 scene, 0 boundaries                          (❌ �
 
 ---
 
-## 三、核心结论（用于面试 / 简历）
+## 三、核心结论
 
 1. **OmniShotCut 在 Sudden Jump 上的领先是真实的**：PySceneDetect 和 TransNetV2 在 test_03 上**都是 0 边界**，OmniShotCut 准确标 `Sudden_Jump` —— 这是 0.261 → 0.761 论文数据的现场复现，且本机比论文更极端。
 
@@ -103,9 +103,9 @@ cd /home/yg/yg/code/github/OmniShotCut
 
 ---
 
-## 五、面试金句模板
+## 五、实验结论摘要
 
-> "我本机跑了 OmniShotCut + TransNetV2 + PySceneDetect 在同源跳剪场景的对比 —— PySceneDetect 和 TransNetV2 在我合成的 test_03 上**都是 0 个边界检出**（TransNetV2 在论文 Table 1 给的 0.261 准确率，本机这次更极端，全漏）。OmniShotCut 不仅在 frame 150 处准确检出边界，还正确标记为 Sudden_Jump 而不是 Hard_Cut —— 这是它跟 baseline 的根本差异：另两家只告诉你'这里有边界'，OmniShotCut 还告诉你'是同源跳剪不是场景切换'。这正是 Cosmos / Open-Sora Plan 视频生成数据 pipeline 里 jump cut 检测痛点的目标能力。
->
-> 同时我也发现 OmniShotCut 在 ffmpeg xfade dissolve 上没识别为 dissolve（标 Hard_Cut），说明合成训练数据和实际渲染管线的分布偏差仍是开放问题。"
+OmniShotCut + TransNetV2 + PySceneDetect 在同源跳剪场景的对比：PySceneDetect 和 TransNetV2 在 test_03 上**都是 0 个边界检出**（TransNetV2 在论文 Table 1 给的 0.261 准确率，本机这次更极端，全漏）。OmniShotCut 不仅在 frame 150 处准确检出边界，还正确标记为 `Sudden_Jump` 而非 `Hard_Cut` —— 这是它跟 baseline 的根本差异：另两家只告诉你"这里有边界"，OmniShotCut 还告诉你"这是同源跳剪而非场景切换"。这正是 NVIDIA Cosmos / Open-Sora Plan 视频生成数据 pipeline 里 jump cut 检测痛点的目标能力。
+
+OmniShotCut 在 ffmpeg `xfade=dissolve` 上未识别为 dissolve（标 `Hard_Cut`），说明合成训练数据和实际渲染管线的分布偏差仍是该方向的开放问题。
 
