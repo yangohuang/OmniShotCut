@@ -1,0 +1,82 @@
+[
+  {
+    "video_path": "test_videos/test_01_hardcut.mp4",
+    "num_scenes": 6,
+    "scenes": [
+      [
+        0,
+        59
+      ],
+      [
+        60,
+        123
+      ],
+      [
+        124,
+        149
+      ],
+      [
+        150,
+        224
+      ],
+      [
+        225,
+        294
+      ],
+      [
+        295,
+        299
+      ]
+    ],
+    "boundaries": [
+      60,
+      124,
+      150,
+      225,
+      295
+    ]
+  },
+  {
+    "video_path": "test_videos/test_02_dissolve.mp4",
+    "num_scenes": 5,
+    "scenes": [
+      [
+        0,
+        59
+      ],
+      [
+        60,
+        123
+      ],
+      [
+        124,
+        194
+      ],
+      [
+        195,
+        264
+      ],
+      [
+        265,
+        269
+      ]
+    ],
+    "boundaries": [
+      60,
+      124,
+      195,
+      265
+    ]
+  },
+  {
+    "video_path": "test_videos/test_03_sudden_jump.mp4",
+    "num_scenes": 1,
+    "scenes": [
+      [
+        0,
+        299
+      ]
+    ],
+    "boundaries": []
+  }
+]

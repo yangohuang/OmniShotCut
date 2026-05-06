@@ -1,0 +1,8 @@
+[
+    {
+        "video_path": "test_videos/test_03_sudden_jump.mp4",
+        "pred_ranges": [[0, 150], [150, 294], [294, 300]],
+        "pred_intra_labels": ["General", "General", "General"],
+        "pred_inter_labels": ["New_Start", "Sudden_Jump", "Sudden_Jump"]
+    }
+]
