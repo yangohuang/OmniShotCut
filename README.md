@@ -134,8 +134,8 @@ done
 ./run.sh shell eval_runs/plot_comparison.py
 ```
 
-`run.sh` 的作用是 export `PYTHONNOUSERSITE=1` 并走 conda env 的绝对路径 python——
-本机的 `~/.local/site-packages` 在 sys.path 优先级高于 conda env，不屏蔽就会加载到旧版包。
+`run.sh` 会设置 `PYTHONNOUSERSITE=1`，避免用户目录中的包干扰运行环境，
+并使用当前已激活环境中的 `python`。如需指定解释器，可设置 `ENV_PYTHON` 为其路径。
 
 ### 启动 Gradio demo（本地）
 

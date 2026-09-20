@@ -1,11 +1,15 @@
-# 本地部署速查（光哥本机 RTX 4090, conda env: OmniShotCut）
+# 本地部署速查（测试环境：RTX 4090, conda env: OmniShotCut）
 
 ## 启动 Gradio demo
 ```bash
-cd /path/to/yg/code/github/OmniShotCut
+# 以下命令从 OmniShotCut 仓库根目录执行
+conda activate OmniShotCut
 ./run.sh app
 ```
 浏览器打开 http://127.0.0.1:7860
+
+`run.sh` 默认使用当前环境中的 `python`。也可以将 `ENV_PYTHON` 设置为
+所需 Python 解释器的路径，再执行 `./run.sh`。
 
 ## 命令行推理（推荐做对比 demo 用）
 ```bash
@@ -25,10 +29,10 @@ cd /path/to/yg/code/github/OmniShotCut
 2. **绝不要 `pip install`，要用 `python -m pip`**：env 创建时 PATH 里 `pip` 命令
    指向 `~/.local/bin/pip`，会把包装到 ~/.local/ 污染所有环境。要装包：
    ```bash
-   PYTHONNOUSERSITE=1 /path/to/miniforge3/envs/OmniShotCut/bin/python -m pip install <pkg>
+   PYTHONNOUSERSITE=1 python -m pip install <pkg>
    ```
 3. **app.py 已改本地化**：原版 `demo.launch(share=True)` 会开 gradio.live 公网
-   隧道，不适用于本地演示。已改为 `server_name="127.0.0.1", share=False`。
+   隧道。本地演示使用 `server_name="127.0.0.1", share=False`。
 4. **GPU 显存**：模型本身 < 1GB，但有其他进程占着显存时（ollama / vllm / digithuman
    服务），可能 OOM。冲突时先 `nvidia-smi` 看占用并选择性 kill。
 

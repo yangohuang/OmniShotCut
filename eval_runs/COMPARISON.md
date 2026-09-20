@@ -83,7 +83,7 @@ test_03_sudden_jump.mp4→ 1 scene, 0 boundaries                          (❌ �
 ## 四、复现脚本
 
 ```bash
-cd /path/to/yg/code/github/OmniShotCut
+# 以下命令从 OmniShotCut 仓库根目录执行
 
 # OmniShotCut（每段视频依次跑）
 ./run.sh infer --input_video_path test_videos/test_03_sudden_jump.mp4 --mode default
