@@ -8,7 +8,7 @@ from pathlib import Path
 import numpy as np
 from transnetv2pt import predict_video
 
-REPO = Path("/path/to/yg/code/github/OmniShotCut")
+REPO = Path(__file__).resolve().parents[1]
 TEST_VIDEOS = [
     REPO / "test_videos/test_01_hardcut.mp4",
     REPO / "test_videos/test_02_dissolve.mp4",
