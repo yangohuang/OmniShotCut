@@ -8,7 +8,7 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 
-REPO = Path("/home/yg/yg/code/github/OmniShotCut")
+REPO = Path(__file__).resolve().parents[1]
 OUT = REPO / "eval_runs"
 
 # Ground truth + total frames (manual, from GROUND_TRUTH.md)

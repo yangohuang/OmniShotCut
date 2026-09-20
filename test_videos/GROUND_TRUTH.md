@@ -84,7 +84,7 @@ OmniShotCut 是 2026 年首个把这一项做到 0.76 的开源模型。
 
 ### 跑 OmniShotCut 推理
 ```bash
-cd /home/yg/yg/code/github/OmniShotCut
+# 以下命令从 OmniShotCut 仓库根目录执行
 
 # clean_shot 模式：直接出干净分镜
 ./run.sh infer --input_video_path test_videos/test_01_hardcut.mp4 --mode clean_shot

@@ -4,7 +4,8 @@
 set -euo pipefail
 cd "$(dirname "$0")"
 export PYTHONNOUSERSITE=1
-ENV_PYTHON="/home/yg/miniforge3/envs/OmniShotCut/bin/python"
+# Use the activated environment, or set ENV_PYTHON to an interpreter path.
+ENV_PYTHON="${ENV_PYTHON:-python}"
 
 case "${1:-app}" in
   app)
@@ -16,6 +17,7 @@ case "${1:-app}" in
       --checkpoint_path "${CKPT:-checkpoints/OmniShotCut_ckpt.pth}" "$@"
     ;;
   shell)
+    shift
     exec "$ENV_PYTHON" "$@"
     ;;
   *)

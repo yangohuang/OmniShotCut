@@ -84,7 +84,7 @@ frame 150 处不仅检出边界，还**准确分类为 `Sudden_Jump`**（不是 
 ### 跑全流程
 
 ```bash
-cd /home/yg/yg/code/github/OmniShotCut
+# 以下命令从 OmniShotCut 仓库根目录执行
 
 # 1. OmniShotCut（每段视频依次跑）
 ./run.sh infer --input_video_path test_videos/test_01_hardcut.mp4    --mode default
